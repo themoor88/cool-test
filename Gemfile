@@ -12,6 +12,8 @@ gem 'kaminari' # adds pagination to ActiveModels
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'responders', '~> 2.0'
+gem 'figaro'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
