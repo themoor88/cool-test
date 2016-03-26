@@ -1,9 +1,11 @@
 <% content_for :title do %>Users<% end %>
 <h3>Here is the user list.  Please click on one to see messages.</h3>
 <br/>
-<%= render partial: 'list', locals: { users: User.all }%>
+<div class="user-list">
+  <%= render partial: 'list', locals: { users: User.all } %>
+</div>
 <br/>
-<%= form_tag("/api/users", method: "post", remote: true) do %>
+<%= form_tag("/api/users", format: :html, method: "post", remote: true) do %>
   <%= label_tag(:add_user, "Add User:") %>
   <%= text_field_tag("user[name]") %>
   <%= submit_tag("Add") %>

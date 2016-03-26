@@ -1,0 +1,2 @@
+$('.user-list').html('<%= escape_javascript( render partial: "/app/views/users/list", locals: { users: User.all })%>')
+console.log("hello world");
