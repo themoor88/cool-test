@@ -3,7 +3,7 @@
 <br/>
 <%= render partial: 'list', locals: { users: User.all }%>
 <br/>
-<%= form_tag("/api/users.json", method: "post") do %>
+<%= form_tag("/api/users", method: "post", remote: true) do %>
   <%= label_tag(:add_user, "Add User:") %>
   <%= text_field_tag("user[name]") %>
   <%= submit_tag("Add") %>
